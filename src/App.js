@@ -3,10 +3,6 @@ import Cart from "./Components/Cart";
 import "./App.css";
 import Contents from "./Components/Contents";
 import { useState } from "react";
-import WebBuilder from "./WebBuilder";
-// import 'grapesjs/dist/css/grapes.min.css';
-// import grapesjs from 'grapesjs';
-// import gjsPresentWebPage from "grapesjs-preset-webpage"
 
 function App() {
   // const [editor , setEditor] = useState(null)
@@ -62,16 +58,7 @@ function App() {
     },
   ];
 
-  // useEffect(() => {
-  //   const editor = grapesjs.init({
-  //     container:"#editor",
-  //     plugins:[gjsPresentWebPage],
-  //     pluginsOpts:{
-  //       gjsPresentWebPage:{}
-  //     }
-  //   });
-  //   setEditor(editor);
-  // } , [])
+ 
   const [featurelist, setFeaturelist] = useState(list);
 
   const clickHandler = (item, id) => {
@@ -107,7 +94,7 @@ function App() {
   };
 
   return (
-    <WebBuilder>
+   
     <div className="App">
       {/* <div id="editor"> */}
       <Header
@@ -127,7 +114,7 @@ function App() {
       {show && <Cart cart={cart} />}
       {/* </div> */}
     </div>
- </WebBuilder> );
+
 }
 
 export default App;
